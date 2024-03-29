@@ -42,11 +42,16 @@ const power = function (firstNumber, secondNumber) {
 };
 
 const factorial = function (number) {
+  let result = 1;
   if (number === 0) {
     return 1;
   }
+
   else {
-    return number * factorial(number - 1);
+    for (let i = number; i >= 1; i--) {
+      result *= i;
+    }
+  return result;  
   }
 };
 
