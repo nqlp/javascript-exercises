@@ -11,22 +11,21 @@ const sumAll = function (firstNum, secondNum) {
         let temp = firstNum;
         firstNum = secondNum;
         secondNum = temp;
-        let finalSum = 0;
-        for (let i = firstNum; i <= secondNum; i++) {
-            finalSum += i;
-        }
-        return finalSum;
+        return calculateSumInRange(firstNum, secondNum);
     }
 
     else {
-        let finalSum = 0;
-        for (let i = firstNum; i <= secondNum; i++) {
-            finalSum += i;
-        }
-        return finalSum;
+        return calculateSumInRange(firstNum, secondNum);
     }
-
 };
+
+const calculateSumInRange = function (firstNum, secondNum) {
+    let finalSum = 0;
+    for (let i = firstNum; i <= secondNum; i++) {
+        finalSum += i;
+    }
+    return finalSum;
+}
 
 // Do not edit below this line
 module.exports = sumAll;
